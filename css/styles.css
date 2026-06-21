@@ -287,6 +287,15 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.gpa-badge {
+    position: absolute;
+    top: 1.5rem;   /* Adjust this to move it up or down */
+    right: 1.5rem; /* Adjust this to move it left or right */
+    font-weight: 600;
+    color: var(--bs-text-muted); 
+    font-size: 0.875rem;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
