@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+
+
+
+<link rel="stylesheet" href=https://waph-phung.github.io/style1.css>
+<div class="container wrapper">
+  <div id="top"><!--put any top content between here-->
+    
+
+
+    
+  </div>
+  <div class="wrapper">
+    <div id="menuebar">
+      <!--put any content as a menu between here-->
+    </div>
+    <div id="main">
+      <!--put any main content between here-->
+    </div>
+  </div>
+</div>
+
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JKKWH4Q2RX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JKKWH4Q2RX');
+</script>
+
+<meta charset="utf-8">
+<title>WAPH-Connor Monaghan Student</title>
+<style>
+  .button{
+    background-color: #4CAF50;/*Green*/
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .round {border-radius: 8px;}
+  #response{background-color: #ff9800;}/*Orange*/
+</style>
+</head>
+<body>
+<div id="top">
+  <h1>Web Application Programming and Hacking</h1>
+  <h2>Front-end Web Development Lab</h2>
+  <h3>Instructor: Dr. Phu Phung</h3>
+</div>
+<div id="menubar">
+  <h3>Student: Connor Monaghan</h3>
+    
+    <div id="email" onclick="showhideEmail()">Show my email</div>
+  <img src="headshot.png" alt="My Headshot" width="50">
+</div>
+
+<div id="main">
+  <p>A simple HTML page </p>
+  Using the <a href="https://www.w3schools.com/html"> W3Schools template</a>
+  <hr>
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+  <script>
+    $.get("https://api.weatherstack.com/current?access_key=ca1ffd0b84695483822e5c0c8ac1d5c0&query=Cincinnati&units=f", function(result) {
+        // Fixed the missing parenthesis on this line
+        console.log(JSON.stringify(result)); 
+        
+        // Extract specific details from the API response
+        const location = result.location.name;
+        const temp = result.current.temperature;
+        const description = result.current.weather_descriptions[0];
+
+        // Format it neatly and display it inside the #response div
+        $("#response").html(`
+            <p><strong>Location:</strong> ${location}</p>
+            <p><strong>Temperature:</strong> ${temp}°f</p>
+            <p><strong>Conditions:</strong> ${description}</p>
+        `);
+    });
+  </script>
+  <div id=response></div>
+</body>
+</html>
+
+<div id="Tasks">
+  <div id="digit-clock"></div>
+
+  <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
+
+  <div id="joke"></div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+
+
+
+<script>
+  async function guessAge(name){
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    if (!nameRegex.test(name)) {
+        $("#response").text("Please enter a valid name.");
+        return;
+    }
+    const safeName = encodeURIComponent(name);
+    const response = await fetch("https://api.agify.io/?name="+safeName);
+    const result = await response.json();
+    $("#response" ).text("Hi " + name + ", your age should be " + result.age);
+  }
+</script>
+
+
+  
+
+<div id="joke"></div>
+<script>
+  function getjoke(){
+  $.get("https://v2.jokeapi.dev/joke/Any?type=single",
+  function(result) {
+    $("#joke").text("Joke of the minute!: " + result.joke)
+  })  
+  }
+  getjoke();
+  setInterval(getjoke(), 60000);
+  
+  document.getElementById('joke').innerHTML = getjoke();
+  
+</script>
+
+<div id="comic-container">
+    <h2 id="comic-title"></h2>
+    <img id="comic-image" src="" alt="Loading comic...">
+    <p id="comic-alt"></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  const xkcdApi = "https://corsproxy.io/?https://xkcd.com/info.0.json";
+
+  $.getJSON(xkcdApi, function(data) {
+    $("#comic-title").text(data.title);
+    $("#comic-image").attr("src", data.img);
+    $("#comic-image").attr("alt", data.alt);
+    $("#comic-alt").text(data.alt);
+  }).fail(function() {
+    console.log("Error: Could not load the XKCD comic.");
+  });
+</script>
+
+
+
+<script src="https://waph-phung.github.io/clock.js"></script>
+<script>
+  var canvas = document.getElementById("analog-clock");
+  var ctx = canvas.getContext("2d");
+  var radius = canvas.height / 2;
+  ctx.translate(radius, radius);
+  radius = radius * 0.90;
+  setInterval(drawClock, 1000);
+  function drawClock() {
+    drawFace(ctx, radius);
+    drawNumbers(ctx, radius);
+    drawTime(ctx, radius);
+  }
+</script>
+
+<script>
+function displayTime(){
+  document.getElementById('digit-clock').innerHTML = "Current Time: " + new Date();
+}
+setInterval(displayTime, 500);
+</script>
+
+<script src="email.js"></script>
+
+
+
