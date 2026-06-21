@@ -116,6 +116,9 @@
   --bs-danger: #ea868f;
   --bs-light: #212529; /* Flipped */
   --bs-dark: #f8f9fa;  /* Flipped */
+  --bs-navbar-color: rgba(255, 255, 255, 0.75); /* These are the colors for the navbar text/icons */
+  --bs-navbar-hover-color: #ffffff;
+  --bs-navbar-active-color: #ffffff;
 
   /* RGB Equivalents for modified theme colors */
   --bs-primary-rgb: 92, 109, 247;
@@ -3779,6 +3782,8 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
