@@ -248,23 +248,32 @@
                     if (cookie.indexOf(cookieName) === 0) {
                         return cookie.substring(cookieName.length, cookie.length);
                     }
-            }
+                }
             return null;
-        }
+            }
             function displayWelcomeMessage() {
-            const username = getCookie("username");
-            const currentDate = new Date().toLocaleString();
+                const username = getCookie("username");
+                console.log("Username from cookie:", username); // Debugging line
+                const currentDate = new Date().toLocaleString();
 
-                if (!username) {
-                    // First time visit
-                    alert('Welcome to my homepage for the first time!');
-                    setCookie("username", "YOURusername", 365); // Set the cookie for 1 year
-                    setCookie("lastVisitDate", currentDate, 365); // Set the last visit date
-                } else {
-                    // Revisit
-                    const lastVisitDate = getCookie("lastVisitDate");
-                    alert('Welcome back! Your last visit was ' + lastVisitDate);
-                    setCookie("lastVisitDate", currentDate, 365); // Update the last visit date
+                if (username) {
+                    const currentTime = Date.now(); // Current time in milliseconds
+                    const lastVisitStr = getCookie("lastVisitDate"); 
+
+                    const lastVisitTime = new Date(lastVisitStr).getTime();
+
+                    const timeDiffMs = currentTime - lastVisitTime; // Need to check if this is within a week but not within 2 hours
+
+                    const twoHoursMs = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+                    const oneWeekMs = 7 * 24 * 60 * 60 * 1000; // 1 week in 
+                    
+                    console.log("Welcome back, " + username + "! Your last visit was on " + lastVisitStr);
+
+                    if (timeDiffMs > twoHoursMs && timeDiffMs <= oneWeekMs) {
+                        alert(`Back so soon? I hope thats a good sign!`);
+                    }
+                    // Update the last visit date cookie as an iso string
+                    document.cookie = `lastVisitDate=${new Date().toISOString()}; path=/; max-age=${30 * 24 * 60 * 60}`; 
                 }
             }
             window.onload = displayWelcomeMessage;
