@@ -116,10 +116,11 @@
   --bs-danger: #ea868f;
   --bs-light: #212529; /* Flipped */
   --bs-dark: #f8f9fa;  /* Flipped */
-  --bs-navbar-color: rgba(255, 255, 255, 0.75); /* These are the colors for the navbar text/icons */
+/*--bs-navbar-color: rgba(255, 255, 255, 0.75); 
   --bs-navbar-hover-color: #ffffff;
   --bs-navbar-active-color: #ffffff;
-
+  */
+  
   /* RGB Equivalents for modified theme colors */
   --bs-primary-rgb: 92, 109, 247;
   --bs-secondary-rgb: 235, 94, 159;
