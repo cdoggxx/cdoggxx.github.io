@@ -11725,7 +11725,8 @@ textarea.form-control-lg {
 }
 body,
 html {
-  height: 100%;
+  height: 90%;
+  zoom: 90%;
 }
 
 .bg-gradient-primary-to-secondary {
