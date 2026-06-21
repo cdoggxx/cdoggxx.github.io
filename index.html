@@ -233,13 +233,7 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script>
-/*
-            function setCookie(name, value, days) {
-                const expires = new Date();
-                expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-                document.cookie = name + "=" + value + ";expires=" + expires.toUTCString() + ";path=/";
-            }
-*/
+
             function getCookie(name) {
                 const cookieName = name + "=";
                 const cookies = document.cookie.split(';');
@@ -265,9 +259,9 @@
                     const timeDiffMs = currentTime - lastVisitTime; // Need to check if this is within a week but not within 2 hours
 
                     const twoHoursMs = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
-                    const oneWeekMs = 7 * 24 * 60 * 60 * 1000; // 1 week in 
+                    const oneWeekMs = 7 * 24 * 60 * 60 * 1000; // 1 week in milliseconds
                     
-                    console.log("Welcome back, " + username + "! Your last visit was on " + lastVisitStr);
+                    console.log("Your last visit was on " + lastVisitStr);
 
                     if (timeDiffMs > twoHoursMs && timeDiffMs <= oneWeekMs) {
                         alert(`Back so soon? I hope thats a good sign!`);
