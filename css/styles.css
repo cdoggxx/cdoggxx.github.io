@@ -86,6 +86,8 @@
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
 
   --bs-text-muted: #6c757d;
+
+  --bs-card-bg: #fff;
 }
 
 [data-theme="dark"] {
@@ -184,6 +186,8 @@
   --bs-navbar-brand-hover-color: #ffffff;
 
   --bs-text-muted: #bcc8d2;
+
+  --bs-card-bg: #000000;
 }
 
 
@@ -4341,7 +4345,7 @@ textarea.form-control-lg {
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: #fff;
+  /*--bs-card-bg: #fff;*/
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
