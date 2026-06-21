@@ -88,6 +88,7 @@
   --bs-text-muted: #6c757d;
 
   --bs-card-bg: #fff;
+  --bs-card-color: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -188,6 +189,7 @@
   --bs-text-muted: #bcc8d2;
 
   --bs-card-bg: #000000;
+  --bs-card-color: #000000;
 }
 
 
@@ -4344,7 +4346,7 @@ textarea.form-control-lg {
   --bs-card-cap-bg: rgba(0, 0, 0, 0.03);
   --bs-card-cap-color: ;
   --bs-card-height: ;
-  --bs-card-color: ;
+  /*--bs-card-color: ;*/
   /*--bs-card-bg: #fff;*/
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
