@@ -39,9 +39,13 @@
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                             <li class="nav-item"><a class="nav-link" href="WebClass.html">Web Class</a></li>
-                            <button id="theme-toggle" style="padding: 8px 16px; cursor: pointer; border-radius: 6px; border: 1px solid var(--bs-border-color); background: var(--bs-body-bg); color: var(--bs-body-color);">
-                                <span id="theme-icon">🌙</span> <span id="theme-text">Dark Mode</span>
-                            </button>
+                            <div class="theme-switch-wrapper">
+                                <label class="switch" for="theme-toggle-checkbox">
+                                    <input type="checkbox" id="theme-toggle-checkbox" />
+                                    <div class="slider round"></div>
+                                </label>
+                                <span id="theme-text">Dark Mode</span>
+                            </div>
                             <!--<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>-->  <!-- Hiding this for the time being -->
                             <!--<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>-->    <!--Commented out because this isn't free-->
                         </ul>
