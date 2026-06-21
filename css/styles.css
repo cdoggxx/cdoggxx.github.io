@@ -11728,6 +11728,15 @@ html {
   height: 100%;
 }
 
+.side-by-side-container {
+  display: flex;
+  flex-direction: row;        /* Forces them to sit left-to-right */
+  align-items: center;        /* Vertically centers the buttons with the image */
+  justify-content: flex-start; /* Aligns them to the left (use 'center' to center the whole group) */
+  gap: 20px;                  /* Adds clean spacing between the buttons and the image */
+  flex-wrap: nowrap;          /* Prevents them from stacking, forcing the side-by-side look */
+}
+
 .bg-gradient-primary-to-secondary {
   background: #1e30f3;
   background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
