@@ -84,6 +84,8 @@
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
+
+  --bs-text-muted: #6c757d;
 }
 
 [data-theme="dark"] {
@@ -180,6 +182,8 @@
   --bs-navbar-active-color: #ffffff;
   --bs-navbar-brand-color: #ffffff;
   --bs-navbar-brand-hover-color: #ffffff;
+
+  --bs-text-muted: #bcc8d2;
 }
 
 
@@ -8414,7 +8418,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: --bs-text-muted !important;
 }
 
 .text-black-50 {
