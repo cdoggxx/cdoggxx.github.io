@@ -11801,30 +11801,30 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
-*/
+
 /* Mobile / Default styles */
 .profile .profile-img {
   width: auto;
-  height: 70vw;
-  max-height: 22rem;
+  height: 90vw;          /* Increased from 70vw to make it wider/larger on phone screens */
+  min-height: 20rem;     /* Prevents the image from shrinking smaller than 20rem */
+  max-height: 26rem;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 
-  /* Match this value to your card's border-radius */
   border-bottom-left-radius: 2.5rem;
   border-bottom-right-radius: 2.5rem;
 }
 
-/* Desktop styles */
+/* Desktop styles (screens 768px and wider) */
 @media (min-width: 768px) {
   .profile .profile-img {
     height: 35vw;
+    min-height: auto;    /* Resets min-height for desktop */
     max-height: 45rem;
   }
 }
-
 .profile .dots-1 {
   position: absolute;
   width: 3vw;
