@@ -72,7 +72,7 @@
                                 <div class="profile bg-gradient-primary-to-secondary">
                                     <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
                                     <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                                    <img class="profile-img" src="assets/profile.png" alt="..." />
+                                    <img class="profile-img" src="assets/profile.png" alt="Connor Monaghan headshot" />
                                     <div class="dots-1">
                                         <!-- SVG Dots-->
                                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 191.6 1215.4" style="enable-background: new 0 0 191.6 1215.4" xml:space="preserve">
@@ -189,7 +189,13 @@
                             </div>
                         </div>
                         <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About Me</span></h2>
-                        <p class="lead fw-light mb-4">My name is Connor Monaghan. I am a student at the University of Cincinnati, expected to graduate in the spring of 2028. I study Computer Engineering and currently work R.A Jones. Since I was young I have loved making things with my hands, and now I use computers to turn my visions into reality. While on co-op I look forward to making connections and learning more about the vast field of Computer Engineering.</p>
+                        <p class="lead fw-light mb-4">
+                            My name is Connor Monaghan. I am a student at the University of Cincinnati, expected 
+                            to graduate in the spring of 2028. I study Computer Engineering  at R.A Jones. Since 
+                            I was young, I have loved making things with my hands, and now I use computers to turn 
+                            my visions into reality. While on co-op, I look forward to making connections and learning 
+                            more about the vast field of Computer Engineering.
+                        </p>
                     </div>
                 </div>
             </header>
@@ -203,7 +209,7 @@
                                 <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Recent Events</span></h2>
                                 <!-- Carousel starts here-->
                                 <div class="position-relative px-md-5 mt-4">
-                                    <div id="recentEventsCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="recentEventsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000" data-bs-pause="false">
                                         
                                         <!-- Carousel Items -->
                                         <div class="carousel-inner rounded-3 shadow bg-white">
@@ -302,7 +308,7 @@
                                                 <div class="p-3 text-center bg-light border-top">
                                                     <!-- <h5 class="fw-bold mb-1">steel wool trick</h5> -->
                                                     <p class="text-muted mb-0 small">
-                                                        Using a long exposure image and steel wool, I was able to create this cool portal affect.
+                                                        Using a long exposure image and steel wool, I was able to create this cool portal effect.
                                                     </p>
                                                 </div>
                                             </div>
@@ -315,7 +321,7 @@
                                                 <div class="p-3 text-center bg-light border-top">
                                                     <!-- <h5 class="fw-bold mb-1">Big noon kickoff event</h5> -->
                                                     <p class="text-muted mb-0 small">
-                                                        This image was taken at 6am after spending the night sleeping on the floor in order to be first in line 
+                                                        This image was taken at 6 a.m. after spending the night sleeping on the floor in order to be first in line 
                                                         for the Big Noon Kickoff event at the University of Cincinnati. GO BEARCATS!
                                                     </p>
                                                 </div>
@@ -432,7 +438,7 @@
                     console.log("Your last visit was on " + lastVisitStr);
 
                     if (timeDiffMs > twoHoursMs && timeDiffMs <= oneWeekMs) {
-                        alert(`Back so soon? I hope thats a good sign!`);
+                        alert(`Back so soon? I hope that's a good sign!`);
                     }
                     // Update the last visit date cookie as an iso string
                     document.cookie = `lastVisitDate=${new Date().toISOString()}; path=/; max-age=${30 * 24 * 60 * 60}`; 
